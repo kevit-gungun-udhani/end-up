@@ -5,10 +5,10 @@ import { useState } from "react";
 import { useNoDuplicate } from "../hook-store/NoDuplicates";
 import Modal from "./Modal";                                                    
 
-function PostList(){
+function PostList({isModalVisible, onClickHandler}){
     const [enteredBody, setEnteredBody] = useState('');
     const [enteredName, setEnteredName] = useState(useNoDuplicate);
-    const [isModalVisible, setIsModalVisible] = useState(true);
+    
 
     function onBodyChangeHandler(event){
         setEnteredBody(event.target.value);
@@ -18,9 +18,6 @@ function PostList(){
         setEnteredName(event.target.value)
     }
 
-    function onClickHandler(){
-        setIsModalVisible(false)
-    }
     
     return (
         <>
