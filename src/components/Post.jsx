@@ -1,4 +1,3 @@
-import { useNoDuplicate } from "../hook-store/NoDuplicates";
 import styles from './Post.module.css'
 function Post({body, author}){ 
     return(
